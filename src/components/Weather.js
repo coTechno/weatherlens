@@ -11,24 +11,24 @@ import { motion } from 'framer-motion'
 function Weather() {
   const [smShow, setSmShow] = useState(false);
   const [weather, setWeather] = useState([]);
-  const [form, setForm] = useState({
-    city: ""
-  });
+  const [city, setCity] = useState('Enter City Name...');
 
   const APIKEY = `731048237065cedf491b8338171bf163`;
   async function weatherData(e) {
     e.preventDefault();
-    if (form.city == "") {
+    if (city == "") {
       // alert("Add values");
       setSmShow(true);
     } else {
       const data = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${form.city}&APPID=${APIKEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`
       )
         .then((res) => res.json())
         .then((data) => data);
 
       setWeather({ data: data });
+      setCity('')
+      console.log(city);
     }
   }
 
@@ -37,7 +37,7 @@ function Weather() {
     let value = e.target.value;
 
     if (name == "city") {
-      setForm({ ...form, city: value });
+      setCity(value);
     }
   };
   return (
@@ -63,10 +63,11 @@ function Weather() {
       </Modal>
       <InputGroup className="mb-3 form">
         <Form.Control
-          style={{ background: 'transparent', border: 'none', border: '1px solid #001c3767' }}
+          style={{ background: 'transparent', color: '#001c37', fontSize: '17px', border: 'none', border: '1px solid #001c3767' }}
           type="text"
-          placeholder="City"
           name="city"
+          value={city}
+          onClick={()=> setCity('')}
           onChange={(e) => handleChange(e)}
         />
         <Button className="getweather" variant="outline-secondary" id="button-addon2" onClick={(e) => weatherData(e)}>
