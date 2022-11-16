@@ -27,7 +27,7 @@ function Weather() {
         .then((data) => data);
 
       setWeather({ data: data });
-      setCity('')
+      setCity('Enter City Name...')
       console.log(city);
     }
   }
@@ -63,7 +63,7 @@ function Weather() {
       </Modal>
       <InputGroup className="mb-3 form">
         <Form.Control
-          style={{ background: 'transparent', color: '#001c37', fontSize: '17px', border: 'none', border: '1px solid #001c3767' }}
+        style={{ background: '#0909338c', color: 'rgb(255 255 255 / 65%)', fontSize: '15px', border: 'none', border: '1px solid #001c3767' }}
           type="text"
           name="city"
           value={city}
