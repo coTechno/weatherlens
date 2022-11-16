@@ -24,7 +24,7 @@
 .displayweather .maincard .cardsubtitle {
   color: #96a2ac;
   font-size: 18px;
-  margin-left: -89px;
+  margin-left: 10px;
 }
 .displayweather h1 {
   font-size: 5rem;
@@ -92,10 +92,10 @@ h4 {
   }
   .displayweather h1 {
     margin: 0 auto;
-    margin-top: 56px;
+    margin-top: 68px;
   }
   .displayweather .maincard .cardtitle {
-    left: 21px !important;
+    left: 14px !important;
   }
   .displayweather .maincard .cardsubtitle {
     margin: 0 auto;
@@ -106,9 +106,8 @@ h4 {
   }
   
   .displayweather .weather-main {
-    top: 476px;
-    left: 205px;    top: 455px;
-    left: 208px;
+    top: 468px;
+    left: 221px;
   }
   .displayweather .weatherdetails .section1,
   .displayweather .weatherdetails .section2 {
