@@ -99,13 +99,14 @@ h4 {
   .displayweather .maincard .cardtitle {
     left: 21px !important;
   }
+  .displayweather .maincard .cardsubtitle {
+    margin: 0 auto;
+    text-align: center;
+  }
   .displayweather .weather-description {
     left: 21px;
   }
-  /* .displayweather .maincard .cardsubtitle {
-    left: 77px !important;
-    top: 131px;
-  } */
+  
   .displayweather .weather-main {
     top: 476px;
     left: 205px;    top: 455px;

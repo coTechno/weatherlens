@@ -4,21 +4,24 @@ import "./weather.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import gif from '../Assets/gif.gif'
+import gif from '../Assets/gif.gif';
+import Modal from 'react-bootstrap/Modal';
+
 
 
 function Weather() {
+  const [smShow, setSmShow] = useState(false);
   const [weather, setWeather] = useState([]);
   const [form, setForm] = useState({
-    city: "",
-    country: "",
+    city: ""
   });
 
   const APIKEY = `731048237065cedf491b8338171bf163`;
   async function weatherData(e) {
     e.preventDefault();
     if (form.city == "") {
-      alert("Add values");
+      // alert("Add values");
+      setSmShow(true);
     } else {
       const data = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${form.city}&APPID=${APIKEY}`
@@ -37,15 +40,26 @@ function Weather() {
     if (name == "city") {
       setForm({ ...form, city: value });
     }
-    if (name == "country") {
-      setForm({ ...form, country: value });
-    }
   };
   return (
     <div className="weather">
       <div className="logo"><img src={gif} alt="" srcSet="" /></div>
       <span className="title">Weather Lens</span>
       <br />
+      <Modal
+        size="sm"
+        show={smShow}
+        onHide={() => setSmShow(false)}
+        aria-labelledby="example-modal-sizes-title-sm"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="example-modal-sizes-title-sm">
+          Whoopsy Daisy!
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Can't take empty fields.</Modal.Body>
+      </Modal>
       <InputGroup className="mb-3 form">
         <Form.Control
           style={{ background: 'transparent', border: 'none', border: '1px solid #001c3767' }}
