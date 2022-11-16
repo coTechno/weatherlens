@@ -28,7 +28,7 @@ function Weather() {
 
       setWeather({ data: data });
       setCity('Enter City Name...')
-      console.log(city);
+      // console.log(city);
     }
   }
 

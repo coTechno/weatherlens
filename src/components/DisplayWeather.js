@@ -31,8 +31,9 @@ function DisplayWeather(props) {
               {data.name} , {data.sys.country}. Weather
               <br />
               <span className="cardsubtitle">
-                As of<br/>{new Date().toLocaleDateString('en-US',{weekday: 'short', day: "numeric" , month: "short", year: 'numeric'})},
-                {'  '}{new Date().toLocaleTimeString()}
+                As of <br/>
+                {new Date().toLocaleDateString('en-US',{weekday: 'short', day: "numeric" , month: "short", year: "numeric"})}
+                {" "}{new Date().toLocaleTimeString()}
               </span>
             </span>
             <h1>
