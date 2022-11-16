@@ -9,11 +9,18 @@
   padding: 10px 20px;
   text-align: center;
 }
-.weather .logo {
-  top: 0px;
-  position: absolute;
-  left: -34px;
+.weather .front-img{
+  height: 230px;
   width: 200px;
+}
+.weather .front-img img{
+  width: 100%;
+}
+.weather .logo {
+  top: 15px;
+    position: absolute;
+    left: 3px;
+    width: 100px
 }
 .weather .logo img {
   width: 70%;

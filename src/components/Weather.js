@@ -6,8 +6,8 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import gif from '../Assets/gif.gif';
 import Modal from 'react-bootstrap/Modal';
-
-
+import img from '../Assets/img2.png';
+import { motion } from 'framer-motion'
 
 function Weather() {
   const [smShow, setSmShow] = useState(false);
@@ -43,7 +43,9 @@ function Weather() {
   };
   return (
     <div className="weather">
-      <div className="logo"><img src={gif} alt="" srcSet="" /></div>
+      {weather.data != undefined ? (
+      <div className="logo" style={{transitionDelay: '1s'}}><img src={img} alt="" srcSet="" /></div>
+      ): <div style={{height: '160px'}}></div>}
       <span className="title">Weather Lens</span>
       <br />
       <Modal
@@ -55,7 +57,7 @@ function Weather() {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">
-          Whoopsy Daisy!
+            Whoopsy Daisy!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>Can't take empty fields.</Modal.Body>
@@ -82,7 +84,16 @@ function Weather() {
         <div>
           <DisplayWeather data={weather.data} />
         </div>
-      ) : null}
+      ) : 
+
+
+      <motion.div className="front-img" initial={{y: -10}} animate={{y: 10}} transition={{type: 'smooth', repeatType: 'mirror', duration: 2, repeat: Infinity}}>
+        <img src={img} alt="" />
+      </motion.div>
+      
+      
+      
+      }
     </div>
   );
 }
