@@ -22,12 +22,9 @@
 }
 
 .displayweather .maincard .cardsubtitle {
-  /* position: absolute; */
-  /* left: 56px; */
   color: #96a2ac;
-  /* margin-top: -26px; */
   font-size: 18px;
-  margin-left: -143px;
+  margin-left: -89px;
 }
 .displayweather h1 {
   font-size: 5rem;
