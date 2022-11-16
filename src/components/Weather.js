@@ -16,7 +16,7 @@ function Weather() {
   const APIKEY = `731048237065cedf491b8338171bf163`;
   async function weatherData(e) {
     e.preventDefault();
-    if (city == "") {
+    if (city == "" || city == 'Enter City Name...') {
       // alert("Add values");
       setSmShow(true);
     } else {
