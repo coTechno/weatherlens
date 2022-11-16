@@ -43,12 +43,12 @@ function Weather() {
   };
   return (
     <div className="weather">
-      <div className="logo"><img src={gif} alt="" srcset="" /></div>
+      <div className="logo"><img src={gif} alt="" srcSet="" /></div>
       <span className="title">Weather Lens</span>
       <br />
       <InputGroup className="mb-3 form">
         <Form.Control
-          style={{ background: 'transparent', border: 'none', border: '1px solid #001c37' }}
+          style={{ background: 'transparent', border: 'none', border: '1px solid #001c3767' }}
           type="text"
           placeholder="City"
           name="city"
@@ -56,8 +56,8 @@ function Weather() {
         />
         <Button className="getweather" variant="outline-secondary" id="button-addon2" onClick={(e) => weatherData(e)}>
           <svg style={{ color: "#fff", width: '22px', margin: '3px' }}
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
 
         </Button>
