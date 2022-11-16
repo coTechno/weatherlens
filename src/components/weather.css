@@ -12,6 +12,7 @@
 .weather .front-img{
   height: 230px;
   width: 200px;
+  margin-top: 20px;
 }
 .weather .front-img img{
   width: 100%;
@@ -25,15 +26,12 @@
 .weather .logo img {
   width: 70%;
 }
-@media (max-width: 500px) {
-  .weather .logo{
-    position: initial;
-  }
-}
+
 .weather .title {
   font-size: 2.4rem;
   color: #001c37;
   text-transform: uppercase;
+  padding-top: 40px;
 }
 
 .weather .form {
@@ -67,5 +65,11 @@
 .weather .getweather:focus {
   outline: none;
 }
-@media (max-width: 780px) {
+@media (max-width: 500px) {
+  .weather .logo{
+    position: initial;
+  }
+  .weather .title{
+    padding-top: 0px !important;
+  }
 }

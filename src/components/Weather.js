@@ -45,7 +45,7 @@ function Weather() {
     <div className="weather">
       {weather.data != undefined ? (
       <div className="logo" style={{transitionDelay: '1s'}}><img src={img} alt="" srcSet="" /></div>
-      ): <div style={{height: '160px'}}></div>}
+      ): <div style={{height: '80px'}}></div>}
       <span className="title">Weather Lens</span>
       <br />
       <Modal
