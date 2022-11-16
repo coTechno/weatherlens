@@ -4,7 +4,6 @@ import "./weather.css";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import gif from '../Assets/gif.gif';
 import Modal from 'react-bootstrap/Modal';
 import img from '../Assets/img2.png';
 import { motion } from 'framer-motion'
@@ -57,10 +56,10 @@ function Weather() {
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">
-            Whoopsy Daisy!
+          Whoopsie Daisy!
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>Can't take empty fields.</Modal.Body>
+        <Modal.Body>Enter City Name...</Modal.Body>
       </Modal>
       <InputGroup className="mb-3 form">
         <Form.Control
