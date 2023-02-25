@@ -1,0 +1,75 @@
+.weather {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.weather .front-img{
+  height: 230px;
+  width: 200px;
+  margin-top: 20px;
+}
+.weather .front-img img{
+  width: 100%;
+}
+.weather .logo {
+  top: 15px;
+    position: absolute;
+    left: 3px;
+    width: 100px
+}
+.weather .logo img {
+  width: 70%;
+}
+
+.weather .title {
+  font-size: 2.4rem;
+  color: #001c37;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+
+.weather .form {
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: fit-content;
+}
+.weather .form:hover {
+  outline: none;
+  border-radius: 5px;
+}
+
+.weather .getweather {
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 1.3rem;
+  border: none;
+  background: #001c37;
+  cursor: pointer;
+  color: whitesmoke;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.weather .getweather:hover {
+  background: #000b14fe;
+  color: #001c37 !important;
+}
+
+.weather .getweather:focus {
+  outline: none;
+}
+@media (max-width: 500px) {
+  .weather .logo{
+    position: initial;
+  }
+  .weather .title{
+    padding-top: 0px !important;
+  }
+}

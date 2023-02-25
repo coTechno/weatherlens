@@ -1,0 +1,132 @@
+.displayweather {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.displayweather .maincard {
+  width: 80vw;
+  color: #fff;
+  margin-top: 25px;
+  align-self: center;
+  padding: 100px 50px;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+}
+
+.displayweather .maincard .cardtitle {
+  position: absolute;
+  top: 30px;
+  left: 55px;
+  font-size: 1.5rem;
+}
+
+.displayweather .maincard .cardsubtitle {
+  color: #96a2ac;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.displayweather h1 {
+  font-size: 5rem;
+  margin: -10px;
+  margin-left: -150px;
+}
+
+.displayweather .weather-icon {
+  width: 100px;
+  position: absolute;
+  top: 12px;
+  right: 203px;
+}
+
+.displayweather .weather-main {
+  position: absolute;
+  top: 216px;
+  left: 276px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.displayweather .weather-description {
+  position: absolute;
+  left: 55px;
+  bottom: 30px;
+  font-size: 1.4rem;
+}
+.displayweather .weatherdetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 3px auto;
+}
+.displayweather .weatherdetails .section1,
+.displayweather .weatherdetails .section2 {
+  justify-self: right;
+  width: 210px;
+}
+
+h4 {
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+}
+
+.displayweather .weatherdetails span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+@media (max-width: 780px) {
+  .displayweather {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .displayweather .maincard{
+    padding: 62px 50px;
+    margin-top: 20px;
+  }
+  
+  .displayweather .weather-icon {
+    position: initial;
+    margin: 0 -23px;
+  }
+  .displayweather h1 {
+    margin: 0 auto;
+    margin-top: 68px;
+  }
+  .displayweather .maincard .cardtitle {
+    left: 14px !important;
+  }
+  .displayweather .maincard .cardsubtitle {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .displayweather .weather-description {
+    left: 21px;
+  }
+  
+  .displayweather .weather-main {
+    top: 468px;
+    left: 221px;
+  }
+  .displayweather .weatherdetails .section1,
+  .displayweather .weatherdetails .section2 {
+    margin: 0 auto;
+    width: 150px;
+  }
+  .displayweather .weatherdetails .section1 h4,
+  .displayweather .weatherdetails .section2 h4{
+    margin-right: 8px;
+  }
+  .displayweather .weatherdetails{
+    gap: 12px;
+    margin: 20px auto;
+  }
+}
+@media (max-width: 500px) {
+  .displayweather .maincard .cardsubtitle {
+    margin: 0 auto;
+    text-align: center;
+}
+  
+}
